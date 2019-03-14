@@ -1,7 +1,6 @@
-# node
-<h3>&nbsp;&nbsp;node+mongdb搭建博客</h3>
+# node+mongdb搭建博客
 <h4>这是一个开源的个人博客系统。</h4>
-<p>个人纯碎为了练习nodejs而做出来的一个博客，给个Star就是我最大的动力！该系统已停止更新维护，等我有机会接触NodeJS再来写关于NodeJS的博客</p>
+<p>个人纯碎为了练习nodejs而做出来的一个博客，给个Star就是我最大的动力！</p>
 <h4>技术选型：</h4>
 <ul>
   <li>前端使用： &nbsp;ejs模板</li>
