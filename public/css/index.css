@@ -1,0 +1,418 @@
+/* 大屏幕 ：大于等于1200px*/
+@media (min-width: 1200px) {}
+
+/*默认*/
+@media (min-width: 980px) {}
+
+/* 平板电脑和小屏电脑之间的分辨率 */
+/* @media (min-width: 768px) and (max-width: 979px) {} */
+
+/* 横向放置的手机及分辨率更小的设备 */
+/* @media (max-width: 480px) {} */
+
+/*********************************************************************** 横向放置的手机和竖向放置的平板之间的分辨率 */
+@media (max-width: 767px) {
+    #nav960-css {
+        display: none !important
+    }
+
+    #nav480-css {
+        display: block !important;
+    }
+
+    #management-960 {
+        display: none !important;
+    }
+
+    #management-480 {
+        display: block !important;
+    }
+
+    #management-480>ul>li {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .enter-box {
+        width: 98% !important;
+        height: 290px !important;
+        top: 180px !important;
+        left: 5px !important;
+        background: #d1eef6 !important;
+        border-radius: 0 !important
+    }
+
+    .enter-box>.title {
+        display: none
+    }
+
+    .enter-box>p>input {
+        width: 200px !important;
+    }
+
+    .enter-box>p>span {
+        background-color: #222 !important;
+        color: #d1eef6 !important;
+    }
+
+    .enter-box>.btn {
+        padding: 10px 25px !important;
+        background-color: #222 !important;
+        color: #d1eef6 !important;
+    }
+
+    .register-box {
+        width: 98% !important;
+        height: 350px !important;
+        top: 180px !important;
+        left: 5px !important;
+        background: #d1eef6 !important;
+        border-radius: 0 !important
+    }
+
+    .register-box>.title {
+        display: none
+    }
+
+    .register-box>p>input {
+        width: 200px !important;
+    }
+
+    .register-box>p>span {
+        background-color: #222 !important;
+        color: #d1eef6 !important;
+    }
+
+    .register-box>.btn {
+        padding: 10px 25px !important;
+        background-color: #222 !important;
+        color: #d1eef6 !important;
+    }
+
+    .description-img img {
+        width: 50% !important;
+        height: 180px !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+}
+
+/*
+    *公用
+    ******************************************************************************/
+
+#nav960-css {
+    display: block
+}
+
+#nav480-css {
+    display: none;
+}
+
+#management-960 {
+    display: block;
+}
+
+#management-480 {
+    display: none;
+}
+
+.CLICK {
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: #2b2b2b;
+    color: #ccc;
+    padding: 15px 0;
+}
+
+/* 
+*内容
+*********************************************************************************************************/
+.text-back {
+    background-color: #000;
+    color: red;
+}
+
+.colWarning {
+    padding: 30px 0;
+    color: red;
+}
+
+.wrap {
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 1px;
+}
+
+.categoryCss {
+    position: relative;
+}
+
+.category-css{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    background-color: #fff;
+    color: #61b3e6;
+    padding: 0 15px;
+    border-radius: 5px;
+    transform: rotate(-8deg);
+}
+
+.title-css {
+    margin-left: 50px;
+}
+
+.title-css:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.addtime-css {
+    margin-bottom: 15px;
+}
+
+.page-css {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+}
+
+.page-css>div {
+    padding: 0 10px;
+}
+
+.contents-css {
+    text-indent: 40px;
+    background-color: #fff;
+    padding: 10px 0;
+    line-height: 35px;
+
+}
+
+.description-css {
+    line-height: 30px;
+    text-indent: 20px;
+}
+
+.hover-red:hover {
+    cursor: pointer;
+    color: red;
+    font-size: 15px;
+}
+
+.description-img {
+    width: 100%;
+}
+
+.description-img img {
+    width: 100%;
+    height: 100%
+}
+
+.content-css {
+    padding: 10px 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+/**
+*推荐
+*/
+.Featured {
+    padding: 5px 20px;
+    color: #222;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 1px;
+    border-radius: 5px;
+}
+
+.Featured>h4 {
+    color: #2abce4
+}
+
+.list-Featured {
+    list-style: none;
+    text-indent: 20px;
+    line-height: 30px;
+}
+
+.list-Featured>li {
+    padding: 15px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.list-Featured>li>a {
+    text-decoration: none;
+    color: #2abce4;
+    text-align: center;
+}
+
+.list-Featured>li>a:hover {
+    color: #000;
+
+}
+
+/**
+*评论
+*/
+#messageContent {
+    width: 100%;
+    height: 100px;
+}
+
+.comments-bottom {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comments-bottom>div>div {
+    padding: 5px 0;
+}
+
+.comments-content {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px 5px;
+    border: 1px solid #e7e7e7;
+    color: #555;
+    text-indent: 20px;
+    word-wrap: break-word;
+    word-break: normal
+}
+
+.txt-postTime {
+    color: #222;
+    text-align: right;
+}
+
+.txt-username {
+    color: #000;
+    padding-left: 10px;
+    font-weight: 500
+}
+
+/* 
+*登入
+*********************************************************************************************************/
+.enter-box {
+    position: fixed;
+    width: 400px;
+    height: 340px;
+    background-color: #d1eef6;
+    top: 33%;
+    left: 33%;
+    display: none;
+    z-index: 1;
+    border: 1px solid #f8f8f8
+}
+
+.enter-box>.title {
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.enter-box>p {
+    margin: 40px 0;
+}
+
+.enter-box>p>span {
+    width: 80px;
+    height: 41px;
+    line-height: 40px;
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+}
+
+.enter-box>p>input {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: 0;
+    outline: none;
+    padding-left: 20px;
+}
+
+.enter-box>.btn {
+    display: inline-block;
+    background-color: #222;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0 40px;
+    cursor: pointer;
+}
+
+.enter-box>.btn:hover {
+    color: #d1eef6
+}
+
+/* 
+*注册
+*********************************************************************************************************/
+.register-box {
+    position: fixed;
+    width: 400px;
+    height: 450px;
+    background-color: #d1eef6;
+    top: 33%;
+    left: 33%;
+    display: none;
+    z-index: 1;
+}
+
+.register-box>.title {
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+}
+
+.register-box>p {
+    margin: 40px 0;
+}
+
+.register-box>p>span {
+    width: 80px;
+    height: 41px;
+    line-height: 40px;
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+}
+
+.register-box>p>input {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: 0;
+    outline: none;
+    padding-left: 20px;
+}
+
+.register-box>.btn {
+    display: inline-block;
+    background-color: #222;
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0 40px;
+    cursor: pointer;
+}
+
+.register-box>.btn:hover {
+    color: #d1eef6
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" type='text/css' href="/public/css/index.css" />
+    <link rel="stylesheet" type='text/css' href="/public/css/font.css" />
+    <link rel="stylesheet" type='text/css' href="/public/css/bootstrap.min.css" />
+    <script src="/public/js/jquery-3.3.1.min.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- 顶部nav -->
+    <div>
+        <nav id="nav960-css" class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- 登陆注册 -->
+                    <% if(!userInfo._id){ %>
+                    <a id='enter' class="navbar-brand CLICK" onclick="FunEnter()"><i class="glyphicon glyphicon-user"></i>登入</a>
+                    <a class="navbar-brand btn disabled">|</a>
+                    <a id="register" class="navbar-brand CLICK" onclick="FunRegister()"><i class="glyphicon glyphicon-bookmark"></i>注册</a>
+                    <% }else{ %>
+                    <!-- 用户信息 -->
+                    <% if(!userInfo.isAdmin){ %>
+                    <a class="navbar-brand btn disabled">用户:<i>
+                            <%= userInfo.username %></i></a>
+                    <% }else{ %>
+                    <a class="navbar-brand btn disabled">管理员:<span>
+                            <%= userInfo.username %></span></a>
+                    <a class="navbar-brand CLICK" href="/admin">进入管理</a>
+                    <% } %>
+                    <!-- delBtn 控制退出 -->
+                    <a class="navbar-brand btn disabled">|</a>
+                    <a class="navbar-brand btn delBtn CLICK">退出登入</a>
+                    <% } %>
+                </div>
+            </div><!-- /.container -->
+        </nav>
+        <nav id="nav480-css" class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <% if(!userInfo._id){ %>
+                <!-- 登陆注册 -->
+                <a id='enter' class="navbar-brand CLICK" onclick="FunEnter()"><i class="glyphicon glyphicon-user"></i>登入</a>
+                <a class="navbar-brand btn disabled">|</a>
+                <a id="register" class="navbar-brand CLICK" onclick="FunRegister()"><i class="glyphicon glyphicon-bookmark"></i>注册</a>
+                <% }else{ %>
+                <!-- 用户信息 -->
+                <% if(!userInfo.isAdmin){ %>
+                <a class="navbar-brand btn disabled">用户:<i>
+                        <%= userInfo.username %></i></a>
+                <% }else{ %>
+                <a class="navbar-brand btn disabled">管理员:<span>
+                        <%= userInfo.username %></span></a>
+                <a class="navbar-brand CLICK" href="/admin">进入管理</a>
+                <% } %>
+                <!-- delBtn 控制退出 -->
+                <a class="navbar-brand btn delBtn CLICK">退出登入</a>
+                <% } %>
+            </div>
+        </nav>
+    </div> <!-- 顶部nav -->
+
+    <!-- 内容导航 -->
+    <div class="container ">
+        <nav>
+            <ul class="nav nav-tabs  navbar-default">
+                <% if(!category){ %>
+                <li role="presentation" class="active"><a href="/">首页</a></li>
+                <% }else{ %>
+                <li role="presentation"><a href="/">首页</a></li>
+                <% } %>
+                <% for (var i in categoryies){%>
+                <li role="presentation" <% if( category==categoryies[i].id ){ %>
+                    class="active"
+                    <%}else{%>
+                    class=""
+                    <%}%>
+                    ><a href="/?category=<%= categoryies[i].id %>">
+                        <%= categoryies[i].name %></a> </li>
+                <%}%>
+            </ul>
+        </nav>
+        <h2></h2>
+    </div> <!-- 内容导航 -->
+    <!-- 登入 注册 -->
+    <div>
+        <!-- //登入弹出框 -->
+        <div id="enterBox" class="enter-box text-center">
+            <div class="title">Welcome</div>
+            <p><span>用户名</span><input type="text" name="username"></p>
+            <p><span>密码</span><input type="password" name="password"></p>
+            <div class="btn" id="enterBtn">登入</div>
+            <div class="btn" id='enter_flase' onclick="FunEnter_flase()">关闭</div>
+            <div class="colWarning"></div>
+        </div>
+        <!-- //注册弹出框 -->
+        <div id="registerBox" class="register-box text-center">
+            <div class="title">注册</div>
+            <p><span>用户名</span><input name="username" type="text" onkeyup="value=value.replace(/[\W]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"></p>
+            <p><span>密码</span><input name="password" type="password" onkeyup="value=value.replace(/[\W]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"></p>
+            <p><span>确定密码</span><input name="repassword" type="password" onkeyup="value=value.replace(/[\W]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"></p>
+            <div class="btn" id="registerBtn">注册</div>
+            <div class="btn" id='register_flase' onclick="FunRegister_flase()">关闭</div>
+            <div class="colWarning"></div>
+        </div>
+    </div><!-- 登入 注册 -->
+    <!-- 页脚 -->
+</body>
+
+<script src="/public/js/index.js"></script>
+</html>

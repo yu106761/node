@@ -1,0 +1,36 @@
+<% include layout.html %>
+<% include %>
+<div>
+    <h3 class="text-center">用户列表</h3>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>ID</th>
+            <th>用户</th>
+            <th>密码</th>
+            <th>管理员</th>
+        </tr>
+        <% for(var i in users){%>
+        <tr>
+            <td>
+                <%= users[i]._id %>
+            </td>
+            <td>
+                <%=  users[i].username %>
+            </td>
+            <td>
+                <%=  users[i].password %>
+            </td>
+            <td>
+                <% if(  users[i].isAdmin){%>
+                是
+                <%}else{%>
+                否
+                <%}%>
+            </td>
+        </tr>
+        <%}%>
+    </table>
+
+    <% include page.html %>
+</div>
+<% include %>

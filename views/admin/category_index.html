@@ -1,0 +1,25 @@
+<% include layout.html %>
+<% include %>
+<div class="container">
+    <h3 class="text-center">分类列表</h3>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th class="text-center">分类名称</th>
+            <th class="text-center">操作</th>
+        </tr>
+        <% for(var i in categoryies){%>
+        <tr>
+            <td class="text-center">
+                <%=  categoryies[i].name %>
+            </td>
+            <td class="text-center">
+                <div class="btn-group" role="group">
+                    <a href="/admin/category/edit?id=<%= categoryies[i]._id %>" class="btn btn-default">修改</a>
+                    <a href="/admin/category/delete?id=<%= categoryies[i]._id %>" class="btn btn-default">删除</a>
+                </div>
+            </td>
+        </tr>
+        <%}%>
+    </table>
+</div>
+<% include %>

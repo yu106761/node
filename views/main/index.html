@@ -1,0 +1,80 @@
+<% include layout.html %>
+<!-- 内容 -->
+<% include%>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-7 col-xs-12">
+            <% for (var i in contents){%>
+            <div class="wrap">
+                <div class="text-left categoryCss"><span class="category-css">
+                        <%= contents[i].category.name %></span><!-- <----分类 | 标题--——> -->
+                    <a class="title-css" href="/view?contentId=<%=contents[i].id%>">
+                       <i class="glyphicon glyphicon-eye-open"></i> <%= contents[i].title %></a>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="description-img col-sm-4  col-xs-12"><img src="/public/image/logo.jpg"></div>
+                    <div class="col-sm-8 col-xs-12 text-left description-css">
+                        <%= contents[i].description %>
+                    </div> <!-- 简介 -->
+                </div>
+                <hr>
+                <div class="row text-left">
+                    <div class="col-sm-6 col-xs-6 addtime-css"><i class="glyphicon glyphicon-time"></i>：
+                        <%= contents[i].addtime %>
+                    </div>
+                    <div class="col-sm-6 col-xs-6">评论&nbsp;：&nbsp;
+                        <%=contents[i].comments.length%>
+                    </div>
+                </div>
+            </div>
+            <h3></h3>
+            <%}%>
+            <!-- 分页 -->
+            <% if(pages !== 0 & page>=10){%>
+            <div class=" page-css">
+                <div class="row">
+                    <div class="col-sm-4 col-xs-4  text-left">
+                        <% if(page <=1 ){%>
+                        <a class="btn btn-default disabled">上一页</a>
+                        <%}else{%>
+                        <a href="/?category= <%= category %>&page= <%= page-1 %>" class="btn btn-default">上一页</a>
+                        <%}%>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 text-center">
+                        <%=page%>&nbsp;/&nbsp;
+                        <%=pages%>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 text-right">
+                        <% if(page >= pages){%>
+                        <a class="btn btn-default disabled">下一页</a>
+                        <%}else{%>
+                        <a href="/?category= <%= category %>&page= <%= page+1 %>" class="btn btn-default">下一页</a>
+                        <%}%>
+                    </div>
+
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <div class="col-sm-5 col-xs-12">
+            <div class="Featured">
+                <h4><i class="glyphicon glyphicon-star-empty"></i>推荐</h4>
+                <ul class="list-Featured">
+                    <li><a href="https://www.nowcoder.com/ta/js-assessment/?query=&asc=true&order=&page=1"><i
+                            class="glyphicon glyphicon-fire"></i>牛客网</a></li>
+                    <li><a href="https://cdn.baomitu.com/"><i class="glyphicon glyphicon-fire"></i>前端静态资源库</a></li>
+                    <li><a href="https://www.freecodecamp.cn/"><i class="glyphicon glyphicon-fire"></i>FreeCodeCamp</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> <!-- 内容 -->
+<!-- 页脚 -->
+<footer>
+    <div class="footer">
+        <h5 class="text-center">专注前端开发，关注前沿技术</h5>
+        <p class="text-center">蜀ICP备18001040号</p>
+    </div>
+</footer>
+<% include%>

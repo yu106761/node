@@ -1,0 +1,66 @@
+<% include layout.html %>
+<% include %>
+<% for (var i in contents){%>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-xs-12 ">
+            <div class="contents-css">
+                <h2 class="text-center">
+                    <%= contents[i].title %>
+                </h2>
+                <!-- 时间作者 -->
+                <div class="text-center">时间:
+                    <%= contents[i].addtime%>
+                </div>
+                <div class="text-center">作者:
+                    <%= contents[i].user.username %>
+                </div>
+                <!-- 内容 -->
+                <div class="content-css">
+                    <%= contents[i].content %>
+                </div>
+            </div>
+            <!-- 标题 -->
+
+            <h4></h4>
+        </div>
+        <!-- 评论 -->
+        <div class="col-sm-4 col-xs-12">
+            <div class="wrap">
+                <div><b>评论</b> <span class="pull-right">一共有 <i id="messageCount">0</i> 条评论</span></div>
+                <%if(userInfo._id){%>
+                <div>
+                    <textarea id="messageContent"></textarea>
+                    <input type="hidden" id="contentId" value="<%= contents[i]._id%>">
+                    <div id="messageBtn" class="btn btn-success">发表</div>
+                </div>
+                <%}else{%>
+                <div>请登入后，评论</div>
+                <%}%>
+                <hr>
+                <div class="messageList"></div>
+                <div class="pager">
+                    <ul class="clear">
+                        <li class="previous">
+                            <a href=""><i class="glyphicon glyphicon-menu-left"></i></a>
+                        </li>
+                        <li></li>
+                        <li class="next">
+                            <a href=""><i class="glyphicon glyphicon-menu-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<%}%>
+<footer>
+    <div class="footer">
+        <h5 class="text-center">专注前端开发，关注前沿技术</h5>
+        <p class="text-center">蜀ICP备18001040号</p>
+    </div>
+</footer>
+<% include %>
+<script src="/public/js/comment.js"></script>

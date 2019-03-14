@@ -1,0 +1,8 @@
+body {font-family:"宋体", arial;}
+div,form,img,ul,ol,li,dl,dt,dd {font-family:"宋体", arial; }
+li{font-family:"宋体", arial;}
+h1,h2,h3,h4,h5,h6 { font-family:"宋体", arial;}
+a:link {color: #222; text-decoration:none;}
+a:visited {color: #222;text-decoration:none;}
+a:hover {color: #8ea6e9; text-decoration:underline;}
+a:active {color: #d47373;}
