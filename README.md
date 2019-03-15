@@ -95,6 +95,8 @@
 		<p>npm install npm -g</p>
 		<p>npm -v 查看是否安装成功</p>
 	<h5>项目初始化---Express 应用程序生成器（一开始并不了解，我一个个文件创建出来）<h5>
+		<p>初始化项目</p>
+		<p>npm init</p>
 		<p>命令创建了一个名称为 myapp 的 Express 应用。此应用将在当前目录下的 myapp 目录中创建，并且设置为使用 ejs 模板引擎</p>
 		<p>express --view=ejs myapp</p>
 		<p>然后安装所有依赖包：</p>
