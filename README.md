@@ -8,7 +8,7 @@
   <li>数据库选择使用： &nbsp;MongoDB</li>
 </ul>
 <h4>功能</h4>
-<ul style="list-style:none">
+<ul>
 	<li>
 	<h5>登入,注册功能</h5>
 	</li>
