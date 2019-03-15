@@ -8,7 +8,7 @@
   <li>数据库选择使用： &nbsp;MongoDB</li>
 </ul>
 <h4>功能</h4>
-<ul>
+<ol>
   <li>登入,注册功能</li>
   <li>用户管理功能
 	<ul>
@@ -37,7 +37,7 @@
 	     <li>添加内容</li>
 	</ul>
   </li>
-</ul>
+</ol>
 <h4>目录结构</h4>
 <ul>
  <li>data&nbsp;&nbsp;&nbsp;数据库文件夹</li>
