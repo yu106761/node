@@ -48,16 +48,44 @@
 </ul>
 <h4>目录结构</h4>
 <ul>
- <li>data数据库文件夹</li>
-  <li> models封装了对数据库的接口</li> 
-	<li>node_modules项目依赖包</li>
-  <li>public静态资源目录</li> 
-	<li>routers路由目录</li>
-  <li>schemas封装了对数据库的表结构</li> 
-	<li>views模板目录</li>
-  <li> app.js入口文件</li>
-	<li> package.json文件依赖包</li>
-  <li> package-lock.json文件依赖包</li>
+ 	<li>data——————数据库文件夹</li>
+  	<li> models——————封装了对数据库的接口
+		<ul>
+			<li>Category----封装了对分类操作的接口</li>
+			<li>Centent----封装了对内容操作的接口</li>
+			<li>User----封装了对用户操作的接口</li>
+		</ul>
+	</li> 
+	<li>node_modules——————项目依赖包</li>
+  	<li>public——————静态资源目录
+		<ul>
+			<li>css</li>
+			<li>js</li>
+			<li>image</li>
+		</ul>
+	</li> 
+	<li>routers——————路由目录
+		<ul>
+			<li>admin.js----后台逻辑</li>
+			<li>api.js----登入注册逻辑</li>
+			<li>main.js----前台逻辑</li>
+		</ul>
+	</li>
+  	<li>schemas——————封装了对数据库的表结构
+		<ul>
+			<li>Category----封装了对分类表结构</li>
+			<li>Centent----封装了对内容表结构</li>
+			<li>User----封装了对用户表结构</li>
+		</ul>
+	</li> 
+	<li>views——————模板目录</li>
+		<ul>
+			<li>admin----后台模板</li>
+			<li>main----前台模板</li>
+		</ul>
+  	<li> app.js——————入口文件</li>
+	<li> package.json——————文件依赖包</li>
+  	<li> package-lock.json——————文件依赖包</li>
 </ul>
 <h4>项目初步搭建</h4>
 
