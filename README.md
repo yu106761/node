@@ -87,7 +87,43 @@
 	<li> package.json——————文件依赖包</li>
   	<li> package-lock.json——————文件依赖包</li>
 </ul>
-<h4>项目初步搭建</h4>
+<h4>项目搭建</h4>
+	<h5>1.安装node.js<h5>
+		<p>去nodejs官网下载最新版本就行，网址：http://nodejs.cn/download/ ,点击自己适用的系统，自动下载跟电脑操作系统位数符合的安装包，下载下来安装包之后一路next就行，nodejs安装路径不一定要使用默认的，我不想装在C盘，所以我选择了D:\Program Files\nodejs这个路径				</p>
+		<p>node -v 查看是否安装成功</p>
+	<h5>2.安装npm<h5>
+		<p>npm install npm -g</p>
+		<p>npm -v 查看是否安装成功</p>
+	<h5>项目初始化---Express 应用程序生成器（一开始并不了解，我一个个文件创建出来）<h5>
+		<p>命令创建了一个名称为 myapp 的 Express 应用。此应用将在当前目录下的 myapp 目录中创建，并且设置为使用 ejs 模板引擎</p>
+		<p>express --view=ejs myapp</p>
+		<p>然后安装所有依赖包：</p>
+		<p>cd myapp</p>
+		<p>npm install</p>
+		<p>通过如下命令启动此应用</p>
+		<p>npm start</p>
+		<p>然后在浏览器中打开 http://localhost:3000/ 网址就可以看到这个应用了。</p>
+		<p>
+			├── app.js<br>
+			├── bin<br>
+			│   └── www<br>
+			├── package.json<br>
+			├── public<br>
+			│   ├── images<br>
+			│   ├── javascripts<br>
+			│   └── stylesheets<br>
+			│       └── style.css<br>
+			├── routes<br>
+			│   ├── index.js<br>
+			│   └── users.js<br>
+			└── views<br>
+    			├── error.ejs<br>
+    			├── index.ejs<br>
+    			└── layout.ejs</li><br>
+		</p>
+		<p>通过 Express 应用生成器创建应用只是众多方法中的一种。你可以不使用它，也可以修改它让它符合你的需求。</p>
+	<h5><h5>
+	<h5><h5>
 
 
 
