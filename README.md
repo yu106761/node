@@ -98,7 +98,7 @@
 		npm install npm -g
 		npm -v 查看是否安装成功
 		</pre>
-	<h5>项目初始化---Express 应用程序生成器（一开始并不了解，我一个个文件创建出来）<h5>
+	<h5>项目初始化---Express 应用程序生成器（这次我用Express）<h5>
 		<pre>
 		初始化项目
 		npm init
