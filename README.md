@@ -130,19 +130,21 @@
     			├── index.ejs
     			└── layout.ejs
 		</pre>
-	<h5>设置index.ejs模板为index.html<h5>
+	<h5>设置index.ejs模板为index.html还有设置public<h5>
 		<pre>
 			app.set('views', path.join(__dirname, 'views'));
 			// app.set('view engine', 'ejs');
 			var ejs = require('ejs');  //引入的ejs插件
 			app.engine('html', ejs.__express);//设置html引擎
 			app.set('view engine', 'html');//设置视图引擎
+			app.use('/public', express.static(__dirname + '/public')); //静态文件
 		</pre>
 	<h5>安装mongoose<h5>
 		<pre>
 			npm install mongoose
 		</pre>
 	<h5>安装mongoose之后引入数据库<h5>
+		<p>以下代码在app.js输入</p>
 		<pre>
 		var mongoose = require('mongoose'); 
 		mongoose.connect('mongodb://localhost:27018/blog', {
@@ -156,12 +158,6 @@
     				}
 			})
 		</pre>
+		<p>在命令行里输入 mongod --dbpath=""(数据库存放的地方，我这里是F:\node\node_blog\myapp\db) --port="1314"(端口号)</p>
+		<p>下载Robo 3T 地址 https://robomongo.org/ </p>
 		
-
-
-
-
-
-
-
-
