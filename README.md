@@ -87,7 +87,7 @@
 	<li> package.json——————文件依赖包</li>
   	<li> package-lock.json——————文件依赖包</li>
 </ul>
-<h4>项目搭建</h4>
+<h1>用Express搭建项目</h1>
 	<h5>1.安装node.js<h5>
 		<pre>
 		去nodejs官网下载最新版本就行，网址：http://nodejs.cn/download/ ,点击自己适用的系统，自动下载跟电脑操作系统位数符合的安装包，下载下来安装包之后一路next就行，nodejs安装路径不一定要使用默认的
