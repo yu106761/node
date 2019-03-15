@@ -48,16 +48,16 @@
 </ul>
 <h4>目录结构</h4>
 <ul>
- <li>data&nbsp;&nbsp;&nbsp;数据库文件夹</li>
-  <li> models&nbsp;&nbsp;&nbsp;封装了对数据库的接口</li> 
-	<li>node_modules&nbsp;&nbsp;&nbsp;项目依赖包</li>
-  <li>public&nbsp;&nbsp;&nbsp;静态资源目录</li> 
-	<li>routers&nbsp;&nbsp;&nbsp;路由目录</li>
-  <li>schemas&nbsp;&nbsp;&nbsp;封装了对数据库的表结构</li> 
-	<li>views&nbsp;&nbsp;&nbsp;模板目录</li>
-  <li> app.js&nbsp;&nbsp;&nbsp;入口文件</li>
-	<li> package.json&nbsp;&nbsp;&nbsp;文件依赖包</li>
-  <li> package-lock.json&nbsp;&nbsp;&nbsp;文件依赖包</li>
+ <li>data数据库文件夹</li>
+  <li> models封装了对数据库的接口</li> 
+	<li>node_modules项目依赖包</li>
+  <li>public静态资源目录</li> 
+	<li>routers路由目录</li>
+  <li>schemas封装了对数据库的表结构</li> 
+	<li>views模板目录</li>
+  <li> app.js入口文件</li>
+	<li> package.json文件依赖包</li>
+  <li> package-lock.json文件依赖包</li>
 </ul>
 <h4>项目初步搭建</h4>
 
