@@ -8,15 +8,15 @@
   <li>数据库选择使用： &nbsp;MongoDB</li>
 </ul>
 <h4>功能</h4>
-<ol>
+<ul>
   <li>登入,注册功能</li>
   <li>用户管理功能
-	<ul>
+	<ol>
   	     <li>用户列表</li>
-	</ul>
+	</ol>
   </li>
  <li>分类管理功能
-	<ul>
+	<ol>
   	     <li>分类列表
 		 <ul>
   	           <li>修改分类</li>
@@ -24,10 +24,10 @@
 	         </ul>
 	     </li>
 	     <li>添加分类</li>
-	</ul>
+	</ol>
   </li>
   <li>内容管理功能
-	<ul>
+	<ol>
   	     <li>内容列表
 		 <ul>
   	           <li>修改内容</li>
@@ -35,10 +35,10 @@
 	         </ul>
 	     </li>
 	     <li>添加内容</li>
-	</ul>
+	</ol>
   </li>
   <li>评论功能</li>
-</ol>
+</ul>
 <h4>目录结构</h4>
 <ul>
  <li>data&nbsp;&nbsp;&nbsp;数据库文件夹</li>
