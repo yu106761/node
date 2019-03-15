@@ -105,32 +105,33 @@
 		<p>通过如下命令启动此应用</p>
 		<p>npm start</p>
 		<p>然后在浏览器中打开 http://localhost:3000/ 网址就可以看到这个应用了。</p>
-		<p>
-			├── app.js<br>
-			├── bin<br>
-			│   └── www<br>
-			├── package.json<br>
-			├── public<br>
-			│   ├── images<br>
-			│   ├── javascripts<br>
-			│   └── stylesheets<br>
-			│       └── style.css<br>
-			├── routes<br>
-			│   ├── index.js<br>
-			│   └── users.js<br>
-			└── views<br>
-    			├── error.ejs<br>
-    			├── index.ejs<br>
-    			└── layout.ejs</li><br>
-		</p>
+		<pre>
+			├── app.js
+			├── bin
+			│   └── www
+			├── package.json
+			├── public
+			│   ├── images
+			│   ├── javascripts
+			│   └── stylesheets
+			│       └── style.css
+			├── routes
+			│   ├── index.js
+			│   └── users.js
+			└── views
+    			├── error.ejs
+    			├── index.ejs
+    			└── layout.ejs
+		</pre>
 		<p>通过 Express 应用生成器创建应用只是众多方法中的一种。你可以不使用它，也可以修改它让它符合你的需求。</p>
 	<h5>设置index.ejs模板为index.html<h5>
-		<pre>// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'ejs');
-var ejs = require('ejs');  //引入的ejs插件
-app.engine('html', ejs.__express);//设置html引擎
-app.set('view engine', 'html');//设置视图引擎</pre>
+		<pre>
+			app.set('views', path.join(__dirname, 'views'));
+			// app.set('view engine', 'ejs');
+			var ejs = require('ejs');  //引入的ejs插件
+			app.engine('html', ejs.__express);//设置html引擎
+			app.set('view engine', 'html');//设置视图引擎
+		</pre>
 	<h5><h5>
 
 
