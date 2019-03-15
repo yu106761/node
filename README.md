@@ -138,8 +138,25 @@
 			app.engine('html', ejs.__express);//设置html引擎
 			app.set('view engine', 'html');//设置视图引擎
 		</pre>
-	<h5><h5>
-
+	<h5>安装mongoose<h5>
+		<pre>
+			npm install mongoose
+		</pre>
+	<h5>安装mongoose之后引入数据库<h5>
+		<pre>
+		var mongoose = require('mongoose'); 
+		mongoose.connect('mongodb://localhost:27018/blog', {
+    			useNewUrlParser: true
+			}, function (err) {
+	    			if (err) {
+        				console.log('数据库连接失败！！！');
+    				} else {
+       	 				console.log('数据库连接成功！！！');
+        				app.listen(3000);
+    				}
+			})
+		</pre>
+		
 
 
 
