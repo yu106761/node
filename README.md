@@ -124,7 +124,13 @@
     			└── layout.ejs</li><br>
 		</p>
 		<p>通过 Express 应用生成器创建应用只是众多方法中的一种。你可以不使用它，也可以修改它让它符合你的需求。</p>
-	<h5><h5>
+	<h5>设置index.ejs模板为index.html<h5>
+		<pre>// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
+var ejs = require('ejs');  //引入的ejs插件
+app.engine('html', ejs.__express);//设置html引擎
+app.set('view engine', 'html');//设置视图引擎</pre>
 	<h5><h5>
 
 
