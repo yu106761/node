@@ -143,7 +143,7 @@
 		<pre>
 			npm install mongoose
 		</pre>
-	<h5>安装mongoose之后引入数据库<h5>
+	<h5>安装mongoose之后引入数据库,以及启动<h5>
 		<p>以下代码在app.js输入</p>
 		<pre>
 		var mongoose = require('mongoose'); 
