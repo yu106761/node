@@ -159,5 +159,5 @@
 			})
 		</pre>
 		<p>在命令行里输入 mongod --dbpath=""(数据库存放的地方，我这里是F:\node\node_blog\myapp\db) --port="1314"(端口号)</p>
-		<p>可视化工具下载地Robo 3T 地址 https://robomongo.org/ </p>
+		<p>可视化工具 Robo 3T 地址 https://robomongo.org/ </p>
 		
