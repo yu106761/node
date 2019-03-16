@@ -160,4 +160,51 @@
 		</pre>
 		<p>在命令行里输入 mongod --dbpath=""(数据库存放的地方，我这里是F:\node\node_blog\myapp\db) --port="1314"(端口号)</p>
 		<p>可视化工具 Robo 3T 地址 https://robomongo.org/ </p>
-		
+	<h4>注册<h4>
+		<h5>安装body-parser，作用：解析中间件解析 post get 请求---body-parser设置(app.js)<h5>
+			<pre>
+				npm install body-parser
+				app.use(bodyParser.urlencoded({extended: true}));
+			</pre>
+		<h5>在models文件夹下创建user.js---封装接口</h5>
+			<pre>
+				var mongoose = require('mongoose');
+				var userSchema = require('../schemas/user');
+				module.exports=mongoose.model('user',userSchema);
+			</pre>
+		<p>在schemas文件夹下创建user.js---定义用户表结构</p>
+			<pre>
+				var mongoose = require('mongoose');
+				//用户表结构
+				module.exports =  new  mongoose.Schema({
+    					//用户名
+    					username:String,
+    					//密码
+    					password:String,
+    					//是否为管理员用户
+    					isAdmin:{
+        					type:Boolean,
+        					default:false
+    						}
+				})
+			</pre>
+			<p>在api.js里写注册逻辑（api.js记得引入保存用户的数据库）</p>
+			<h5>Ajax请求<h5>
+			<pre>
+			$('#registered').on('click', function () {
+        			$.ajax({
+            				type: 'post',
+            				url: '/api/user/register',
+            				data: {
+                				username: $(".register-wrap").find("[name='username']").val(),
+                				password: $(".register-wrap").find("[name='password']").val(),
+                				repassword: $(".register-wrap").find("[name='repassword']").val(),
+            				},
+            				dataType: 'json',
+            				success: function (result) {
+                				$(".register-wrap").find('.colWarning').html(result.message); //注册确定信息
+                				// if (!result.code) {} 
+            					}
+        				})
+    				})
+			</pre>
