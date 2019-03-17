@@ -208,3 +208,76 @@
         				})
     				})
 			</pre>
+			<h5>登陆<h5>
+				<pre>
+				//引入cookies
+					npm install cookies
+				//app.js 设置
+					var cookies = require('cookies');
+					app.use(function (req, res, next) {
+						  req.cookies = new cookies(req, res);
+						  req.userInfo = {};
+						  if (req.cookies.get('userInfo')) {
+						    try {
+						      req.userInfo = JSON.parse(req.cookies.get('userInfo'));
+						      //获取当前用户是否为管理员
+						      User.findById(req.userInfo._id).then(function (userInfo) {
+							req.userInfo.isAdmin = Boolean(userInfo.isAdmin);
+							next();
+						      })
+						    } catch (e) {
+						      next();
+						    }
+						  } else {
+						    next();
+						  }
+						})
+				// 登陆ajax请求
+					$("#login").on("click", function () {
+					    $.ajax({
+						type: 'post',
+						url: '/api/user/login',
+						data: {
+						    username: $(".login-wrap").find("[name='username']").val(),
+						    password: $(".login-wrap").find("[name='password']").val(),
+						},
+						dataType: 'json',
+						success: function (result) {
+						    $(".login-wrap").find('.colWarning').html(result.message); //登入确定信息
+						    if (!result.code) {
+							$(".login-wrap").hide();
+							$(".login-success").show();
+							setTimeout(function () {
+							    window.location.reload(); //刷新页面
+							}, 1000);
+						    }
+						}
+					    })
+					})
+				//登陆逻辑在api.js里
+				</pre>
+				<h5>退出<h5>
+					<pre>
+					//退出
+					//ajaxget请求
+					$('.login_del').on('click', function () {
+					    $.ajax({
+						url: 'api/user/logout',
+						success: function (result) {
+						    if (!result.code) {
+							window.location.reload(); //刷新页面
+						    }   
+						}
+					    })
+					});
+					//api.js退出逻辑
+					router.get("/user/logout", function (req, res, next) {
+					    req.cookies.set('userInfo', null);
+					    res.json(responseData);
+					})
+					//
+					//页面显示已登陆还是未登陆可以用ejs模板语句if判断来设定
+					//if(!userInfo._id)判断当前是否有用户id来显示
+					//
+				</pre>
+				
